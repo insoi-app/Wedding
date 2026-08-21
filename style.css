@@ -83,18 +83,19 @@ body {
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 0 15px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    color: #FFD84D;
+    color: #C9A227;
     z-index: 2;
 
+    /* Golden Glow */
     text-shadow:
-        0 1px 2px rgba(255, 248, 235, 0.95),
-        0 2px 5px rgba(255, 248, 235, 0.75);
+        0 0 3px rgba(255, 215, 80, 0.9),
+        0 0 8px rgba(255, 200, 50, 0.75),
+        0 0 15px rgba(255, 190, 40, 0.55),
+        0 2px 5px rgba(80, 45, 0, 0.6);
 }
 
 
@@ -116,7 +117,14 @@ body {
     letter-spacing: 0;
     line-height: 1;
 
-    color: #FFD84D;
+    color: #C9A227;
+
+    /* Strong Golden Glow */
+    text-shadow:
+        0 0 4px rgba(255, 225, 100, 1),
+        0 0 10px rgba(255, 205, 60, 0.9),
+        0 0 20px rgba(255, 190, 40, 0.7),
+        0 3px 6px rgba(60, 35, 0, 0.65);
 }
 
 .wedding-names .initials .letter {
@@ -125,11 +133,20 @@ body {
 
 .wedding-names .initials .and {
     font-family: Georgia, serif;
+
     font-size: clamp(22px, 3.5vw, 42px);
     font-style: normal;
+
     letter-spacing: 0;
     margin: 0;
-    color: #FFD84D;
+
+    color: #B8860B;
+
+    /* Golden Glow */
+    text-shadow:
+        0 0 3px rgba(255, 220, 100, 0.95),
+        0 0 8px rgba(255, 200, 50, 0.8),
+        0 0 14px rgba(255, 190, 40, 0.6);
 }
 
 
@@ -150,7 +167,14 @@ body {
 
     white-space: nowrap;
 
-    color: #FFD84D;
+    color: #C9A227;
+
+    /* Golden Glow */
+    text-shadow:
+        0 0 3px rgba(255, 220, 100, 0.9),
+        0 0 7px rgba(255, 200, 50, 0.7),
+        0 0 12px rgba(255, 190, 40, 0.5),
+        0 2px 4px rgba(70, 40, 0, 0.6);
 }
 
 
@@ -171,7 +195,14 @@ body {
 
     font-weight: 500;
 
-    color: #FFD84D;
+    color: #B8860B;
+
+    /* Elegant Golden Glow */
+    text-shadow:
+        0 0 3px rgba(255, 225, 120, 0.95),
+        0 0 8px rgba(255, 205, 70, 0.8),
+        0 0 16px rgba(255, 190, 40, 0.6),
+        0 2px 5px rgba(70, 40, 0, 0.65);
 }
 
 
