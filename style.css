@@ -1,0 +1,2326 @@
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee3d5;
+}
+
+.navbar-nav {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: #8d3040;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: clamp(14px, 1.5vw, 20px);
+    margin: 0 clamp(8px, 2vw, 20px);
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #c59b3b;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 700px;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* =====================================================
+   WEDDING TEXT
+===================================================== */
+
+.wedding-names {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: #4A2C24;
+    z-index: 2;
+
+    text-shadow:
+        0 1px 2px rgba(255, 248, 235, 0.95),
+        0 2px 5px rgba(255, 248, 235, 0.75);
+}
+
+
+/* =====================================================
+   INITIALS — R & C
+===================================================== */
+
+.wedding-names .initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(18px, 3vw, 35px);
+
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 8vw, 100px);
+    font-weight: 400;
+
+    letter-spacing: 0;
+    line-height: 1;
+
+    color: #3B211B;
+}
+
+.wedding-names .initials .letter {
+    display: inline-block;
+}
+
+.wedding-names .initials .and {
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3.5vw, 42px);
+    font-style: normal;
+    letter-spacing: 0;
+    margin: 0;
+    color: #4A2C24;
+}
+
+
+/* =====================================================
+   COUPLE NAMES
+===================================================== */
+
+.wedding-names .couple-names {
+    font-family: Georgia, serif;
+
+    margin-top: clamp(10px, 2vw, 25px);
+
+    font-size: clamp(10px, 1.6vw, 20px);
+
+    letter-spacing: clamp(3px, 0.8vw, 9px);
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    color: #4A2C24;
+}
+
+
+/* =====================================================
+   WEDDING INVITATION TEXT
+===================================================== */
+
+.wedding-names .getting-married {
+    font-family: "Cormorant Garamond", serif;
+
+    margin-top: clamp(6px, 1vw, 12px);
+
+    font-size: clamp(20px, 2vw, 30px);
+
+    font-style: normal;
+
+    letter-spacing: 4px;
+
+    font-weight: 500;
+
+    color: #4A2C24;
+}
+
+
+/* =====================================================
+   WEDDING NAMES - TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .wedding-names {
+        top: 25%;
+    }
+
+    .wedding-names .initials {
+        font-size: clamp(45px, 12vw, 75px);
+        gap: 22px;
+        letter-spacing: 0;
+    }
+
+    .wedding-names .initials .and {
+        font-size: clamp(20px, 4vw, 30px);
+        margin: 0;
+    }
+
+    .wedding-names .couple-names {
+        font-size: clamp(9px, 2.5vw, 16px);
+        letter-spacing: 3px;
+    }
+
+    .wedding-names .getting-married {
+        font-size: clamp(20px, 2.5vw, 26px);
+        letter-spacing: 3px;
+        font-weight: 500;
+    }
+}
+
+
+/* =====================================================
+   WEDDING NAMES - MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .wedding-names {
+        top: 18%;
+    }
+
+    .wedding-names .initials {
+        font-size: clamp(40px, 15vw, 65px);
+        gap: 18px;
+        letter-spacing: 0;
+    }
+
+    .wedding-names .initials .and {
+        font-size: clamp(18px, 5vw, 25px);
+        margin: 0;
+    }
+
+    .wedding-names .couple-names {
+        font-size: clamp(8px, 3vw, 13px);
+        letter-spacing: 2px;
+        margin-top: 10px;
+    }
+
+    .wedding-names .getting-married {
+        font-size: clamp(18px, 4vw, 23px);
+        letter-spacing: 2px;
+        margin-top: 6px;
+        font-weight: 500;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .hero img {
+        height: 550px;
+    }
+
+    .wedding-names {
+        top: 8%;
+    }
+
+    .wedding-names .initials {
+        font-size: 42px;
+        letter-spacing: 4px;
+        gap: 12px;
+    }
+
+    .wedding-names .and {
+        font-size: 15px;
+    }
+
+    .wedding-names .couple-names {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .wedding-names .getting-married {
+        font-size: 11px;
+    }
+}
+
+
+/* =====================================================
+   WEDDING INVITATION
+===================================================== */
+
+.invitation-section {
+    width: 100%;
+    min-height: 750px;
+
+    display: flex;
+    align-items: stretch;
+
+    background-color: #faf7f2;
+
+    padding: 80px 7%;
+    gap: 80px;
+}
+
+
+/* =====================================================
+   INVITATION IMAGE
+===================================================== */
+
+.invitation-image {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.invitation-image img {
+    width: 100%;
+    height: 600px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   INVITATION CONTENT
+===================================================== */
+
+.invitation-content {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 40px;
+
+    color: #5b3038;
+}
+
+
+/* =====================================================
+   OPENING TEXT
+===================================================== */
+
+.invitation-opening {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(18px, 2vw, 27px);
+
+    font-weight: 600;
+
+    letter-spacing: clamp(3px, 0.6vw, 7px);
+
+    line-height: 1.7;
+
+    color: #8d3040;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   INVITATION DIVIDER
+===================================================== */
+
+.invitation-divider {
+    width: 100%;
+    max-width: 330px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin: 35px 0;
+
+    color: #c59b3b;
+
+    font-size: 24px;
+}
+
+.invitation-divider span {
+    height: 1px;
+    flex: 1;
+    background-color: #d9b978;
+}
+
+
+/* =====================================================
+   WE
+===================================================== */
+
+.invitation-content h2 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(65px, 8vw, 110px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #8d3040;
+
+    margin: 0 0 25px;
+}
+
+
+/* =====================================================
+   MAIN INVITATION
+===================================================== */
+
+.invitation-main {
+    max-width: 650px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(17px, 1.6vw, 23px);
+
+    font-weight: 500;
+
+    letter-spacing: clamp(1px, 0.25vw, 3px);
+
+    line-height: 2;
+
+    color: #4d3437;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   INVITATION FLOURISH
+===================================================== */
+
+.invitation-flourish {
+    font-family: "Great Vibes", cursive;
+
+    color: #c59b3b;
+
+    font-size: 42px;
+
+    margin-top: 35px;
+}
+
+
+/* =====================================================
+   INVITATION TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .invitation-section {
+        min-height: auto;
+        padding: 70px 5%;
+        gap: 45px;
+    }
+
+    .invitation-image {
+        width: 50%;
+    }
+
+    .invitation-image img {
+        height: 550px;
+    }
+
+    .invitation-content {
+        width: 50%;
+        padding: 30px 15px;
+    }
+
+    .invitation-main {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+}
+
+
+/* =====================================================
+   INVITATION MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .invitation-section {
+        width: 100%;
+        flex-direction: column;
+
+        padding: 70px 25px;
+
+        gap: 60px;
+    }
+
+    .invitation-image {
+        width: 100%;
+    }
+
+    .invitation-image img {
+        width: 100%;
+        height: 500px;
+    }
+
+    .invitation-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .invitation-opening {
+        font-size: 18px;
+        letter-spacing: 3px;
+        line-height: 1.7;
+    }
+
+    .invitation-main {
+        font-size: 18px;
+        line-height: 1.9;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+/* =====================================================
+   INVITATION SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .invitation-section {
+        padding: 55px 18px;
+        gap: 50px;
+    }
+
+    .invitation-image img {
+        height: 420px;
+    }
+
+    .invitation-content {
+        padding: 0;
+    }
+
+    .invitation-opening {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .invitation-content h2 {
+        font-size: 65px;
+    }
+
+    .invitation-main {
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 1px;
+    }
+
+    .invitation-divider {
+        margin: 25px 0;
+    }
+}
+
+
+/* =====================================================
+   WEDDING DETAILS
+===================================================== */
+
+.wedding-details {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.97),
+            rgba(250, 247, 242, 0.97)
+        );
+
+    padding: 90px 5% 110px;
+
+    color: #8d3040;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   TOP FLOURISH
+===================================================== */
+
+.details-top-flourish {
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 48px;
+
+    color: #c59b3b;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   DATE HEADER
+===================================================== */
+
+.date-header {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    max-width: 1500px;
+
+    margin: 0 auto 85px;
+}
+
+
+/* =====================================================
+   DATE SIDE
+===================================================== */
+
+.date-side {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.date-side span {
+    width: 75%;
+    height: 2px;
+
+    background-color: #3b3030;
+
+    display: block;
+}
+
+.date-side h3 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(26px, 3vw, 50px);
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #8d0808;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   MAIN DATE
+===================================================== */
+
+.main-date {
+    text-align: center;
+
+    min-width: 300px;
+}
+
+.month {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(30px, 4vw, 60px);
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #8d0808;
+}
+
+.date-number {
+    margin: -15px 0 -10px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(110px, 12vw, 190px);
+
+    line-height: 0.9;
+
+    font-weight: 700;
+
+    color: #8d0808;
+}
+
+.year {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(42px, 5vw, 75px);
+
+    font-weight: 700;
+
+    color: #8d0808;
+}
+
+
+/* =====================================================
+   EVENT CONTAINER
+===================================================== */
+
+.event-container {
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 100px;
+}
+
+
+/* =====================================================
+   EVENT CARD
+===================================================== */
+
+.event-card {
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 0 30px;
+}
+
+
+/* =====================================================
+   EVENT IMAGE
+===================================================== */
+/* =====================================================
+   CLICKABLE LOCATION IMAGES
+===================================================== */
+
+.location-image {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.location-image a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.location-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Dark overlay */
+.location-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    color: #ffffff;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+/* Location icon */
+.location-overlay span:first-child {
+    font-size: 30px;
+}
+
+/* Hover effect */
+.location-image:hover img {
+    transform: scale(1.05);
+}
+
+.location-image:hover .location-overlay {
+    opacity: 1;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .location-overlay {
+        opacity: 1;
+
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.05)
+        );
+
+        justify-content: flex-end;
+
+        padding-bottom: 15px;
+
+        font-size: 15px;
+    }
+
+    .location-overlay span:first-child {
+        font-size: 24px;
+    }
+
+}
+
+.event-image {
+    position: relative;
+
+    width: 180px;
+    height: 220px;
+
+    overflow: hidden;
+
+    border: 2px solid #8d3040;
+
+    border-radius: 25px;
+
+    padding: 5px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    margin-bottom: 30px;
+
+    cursor: pointer;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* =====================================================
+   CLICKABLE GOOGLE MAP LINK
+===================================================== */
+/* =====================================================
+   CLICKABLE LOCATION IMAGE
+===================================================== */
+
+.location-image {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.location-image a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.location-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    color: #ffffff;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.location-overlay span:first-child {
+    font-size: 30px;
+}
+
+.location-image:hover img {
+    transform: scale(1.05);
+}
+
+.location-image:hover .location-overlay {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   LOCATION BUTTON
+===================================================== */
+
+.location-button {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 9px 20px;
+
+    color: #ffffff;
+    background: #7a3038;
+
+    border: 1px solid #7a3038;
+
+    text-decoration: none;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+}
+
+.location-button:hover {
+    background: transparent;
+    color: #7a3038;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .location-overlay {
+        opacity: 1;
+
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.05)
+        );
+
+        justify-content: flex-end;
+
+        padding-bottom: 15px;
+
+        font-size: 15px;
+    }
+
+    .location-overlay span:first-child {
+        font-size: 24px;
+    }
+
+    .location-button {
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+
+}
+
+.event-map-link {
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   IMAGE HOVER EFFECT
+===================================================== */
+
+.event-map-link:hover .event-image img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   LOCATION LABEL
+===================================================== */
+
+.location-label {
+    position: absolute;
+
+    bottom: 5px;
+    left: 5px;
+
+    width: calc(100% - 10px);
+
+    padding: 10px 6px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    line-height: 1.2;
+
+    z-index: 2;
+
+    border-radius: 0 0 14px 14px;
+
+    transition: background 0.3s ease;
+}
+
+
+/* =====================================================
+   LOCATION LABEL HOVER
+===================================================== */
+
+.event-map-link:hover .location-label {
+    background: rgba(0, 0, 0, 0.80);
+}
+
+
+/* =====================================================
+   EVENT TITLE
+===================================================== */
+
+.event-title {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(38px, 4vw, 65px);
+
+    font-weight: 400;
+
+    color: #8d0808;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   GOLD DIVIDER
+===================================================== */
+
+.gold-divider {
+    width: 80%;
+
+    max-width: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    color: #c59b3b;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+.gold-divider span {
+    height: 1px;
+
+    flex: 1;
+
+    background-color: #c59b3b;
+}
+
+
+/* =====================================================
+   EVENT DATE / TIME
+===================================================== */
+
+.event-date {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(20px, 2vw, 30px);
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #171717;
+}
+
+.event-time {
+    margin: 3px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(20px, 2vw, 30px);
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: #333333;
+}
+
+
+/* =====================================================
+   VENUE
+===================================================== */
+
+.venue-name {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(19px, 2vw, 29px);
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    line-height: 1.5;
+
+    color: #171717;
+}
+
+
+/* =====================================================
+   DETAILS TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .wedding-details {
+        padding: 80px 4% 90px;
+    }
+
+    .date-header {
+        gap: 25px;
+        margin-bottom: 70px;
+    }
+
+    .date-side h3 {
+        font-size: 27px;
+        letter-spacing: 2px;
+    }
+
+    .main-date {
+        min-width: 240px;
+    }
+
+    .event-container {
+        gap: 50px;
+    }
+
+    .event-card {
+        padding: 0 10px;
+    }
+
+    .event-image {
+        width: 160px;
+        height: 200px;
+    }
+}
+
+
+/* =====================================================
+   DETAILS MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .wedding-details {
+        padding: 70px 20px 80px;
+    }
+
+    .date-header {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-bottom: 65px;
+    }
+
+    .main-date {
+        order: 1;
+
+        min-width: 0;
+    }
+
+    .date-side:first-child {
+        order: 2;
+    }
+
+    .date-side:last-child {
+        order: 3;
+    }
+
+    .date-side {
+        gap: 12px;
+    }
+
+    .date-side span {
+        width: 60%;
+        height: 1px;
+    }
+
+    .date-side h3 {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+
+        gap: 80px;
+    }
+
+    .event-card {
+        width: 100%;
+        padding: 0;
+    }
+
+    .event-image {
+        width: 170px;
+        height: 210px;
+    }
+
+    .event-title {
+        font-size: 48px;
+    }
+
+    .gold-divider {
+        width: 90%;
+    }
+
+    .event-date,
+    .event-time {
+        font-size: 20px;
+    }
+
+    .venue-name {
+        font-size: 19px;
+        line-height: 1.6;
+    }
+
+    .location-label {
+        font-size: 14px;
+        padding: 9px 5px;
+    }
+}
+
+
+/* =====================================================
+   DETAILS SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .wedding-details {
+        padding: 60px 15px 70px;
+    }
+
+    .month {
+        font-size: 30px;
+    }
+
+    .date-number {
+        font-size: 105px;
+    }
+
+    .year {
+        font-size: 45px;
+    }
+
+    .date-side h3 {
+        font-size: 21px;
+    }
+
+    .event-image {
+        width: 150px;
+        height: 190px;
+    }
+
+    .event-title {
+        font-size: 42px;
+    }
+
+    .event-date,
+    .event-time {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .venue-name {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .location-label {
+        font-size: 13px;
+        padding: 8px 4px;
+    }
+}
+
+
+/* =====================================================
+   WEDDING GALLERY CAROUSEL
+===================================================== */
+
+.wedding-gallery {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+#weddingCarousel {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+#weddingCarousel .carousel-inner {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+#weddingCarousel .carousel-item {
+    width: 100%;
+}
+
+#weddingCarousel .carousel-item img {
+    width: 100%;
+
+    height: 600px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+}
+
+
+/* =====================================================
+   GALLERY MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    #weddingCarousel .carousel-item img {
+        height: 400px;
+    }
+}
+
+
+/* =====================================================
+   GALLERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    #weddingCarousel .carousel-item img {
+        height: 300px;
+    }
+}
+
+
+/* =====================================================
+   ENTOURAGE
+===================================================== */
+
+.entourage-section {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 60px 6% 70px;
+
+    background: #1e1e1e;
+
+    color: #ffffff;
+}
+
+.entourage-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.entourage-script {
+    font-family: "Great Vibes", cursive;
+
+    color: #e8c94f;
+
+    font-size: clamp(34px, 4vw, 52px);
+
+    line-height: 0.8;
+
+    margin: 0;
+}
+
+.entourage-title {
+    font-family: "Cormorant Garamond", serif;
+
+    color: #e8c94f;
+
+    font-size: clamp(42px, 5vw, 62px);
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+
+    margin: 5px 0 0;
+}
+
+.parents-section {
+    margin-bottom: 30px;
+}
+
+.parents-group {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.parents-title,
+.group-title,
+.principal-title,
+.secondary-title {
+    font-family: "Great Vibes", cursive;
+
+    color: #e8c94f;
+
+    font-weight: 400;
+}
+
+.parents-title {
+    font-size: clamp(27px, 3vw, 38px);
+
+    line-height: 1;
+
+    margin: 0 0 10px;
+}
+
+.names {
+    font-family: "Cormorant Garamond", serif;
+
+    color: #ffffff;
+
+    font-size: clamp(18px, 1.8vw, 26px);
+
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    text-align: center;
+}
+
+.names div {
+    margin: 0;
+}
+
+.principal-section {
+    margin-top: 5px;
+
+    margin-bottom: 60px;
+}
+
+.principal-title {
+    text-align: center;
+
+    font-size: clamp(32px, 3.5vw, 44px);
+
+    line-height: 1;
+
+    margin: 0 0 28px;
+}
+
+.principal-names {
+    font-family: "Cormorant Garamond", serif;
+
+    color: #ffffff;
+
+    font-size: clamp(18px, 1.8vw, 26px);
+
+    line-height: 1.38;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.principal-names div {
+    margin: 0;
+}
+
+.secondary-title {
+    text-align: center;
+
+    font-size: clamp(34px, 4vw, 48px);
+
+    line-height: 1;
+
+    margin: 0 0 40px;
+}
+
+.entourage-group {
+    text-align: center;
+
+    margin-bottom: 42px;
+}
+
+.group-title {
+    font-size: clamp(27px, 3vw, 38px);
+
+    line-height: 1;
+
+    margin: 0 0 10px;
+}
+
+.secondary-row-one .entourage-group {
+    margin-bottom: 42px;
+}
+
+.secondary-row-two .entourage-group {
+    margin-bottom: 48px;
+}
+
+.secondary-row-three .entourage-group {
+    margin-bottom: 35px;
+}
+
+.flower-girls {
+    margin-top: 5px;
+
+    text-align: center;
+}
+
+.flower-girls .entourage-group {
+    margin-bottom: 0;
+}
+
+.flower-girls .group-title {
+    margin-bottom: 14px;
+}
+
+.flower-girls .names {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   FULL WIDTH PHOTO
+===================================================== */
+
+.full-width-photo {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.full-width-photo img {
+    width: 100%;
+
+    height: 700px;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center center;
+}
+
+
+/* =====================================================
+   FULL WIDTH PHOTO - TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .full-width-photo img {
+        height: 550px;
+    }
+}
+
+
+/* =====================================================
+   FULL WIDTH PHOTO - MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .full-width-photo img {
+        height: 500px;
+    }
+}
+
+
+/* =====================================================
+   FULL WIDTH PHOTO - SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .full-width-photo img {
+        height: 450px;
+    }
+}
+
+
+/* =====================================================
+   DETAILS / ATTIRE PAGE
+===================================================== */
+
+:root {
+    --burgundy: #91323e;
+    --burgundy-dark: #650018;
+    --rsvp-burgundy: #650018;
+    --gold: #f6d35b;
+    --cream: #fffaf0;
+}
+
+.details-page {
+    min-height: 100vh;
+
+    width: 100%;
+
+    background: #91323e;
+
+    color: var(--cream);
+
+    padding: 55px 5vw 70px;
+
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+}
+
+.script-title {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(50px, 5vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+.main-title {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(58px, 5.5vw, 84px);
+
+    font-weight: 400;
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+
+    margin: 40px 0 0 !important;
+
+    padding: 0 !important;
+}
+
+.subtitle {
+    display: block;
+
+    font-family: "Great Vibes", cursive;
+
+    color: var(--gold);
+
+    font-size: clamp(32px, 2.8vw, 44px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 35px 0 0 !important;
+
+    padding: 0 !important;
+}
+
+.intro {
+    font-size: clamp(21px, 1.8vw, 30px);
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+    margin: 30px 0 0 !important;
+
+    padding: 0 !important;
+}
+
+.attire-row {
+    margin-top: 50px !important;
+}
+
+.column-title {
+    color: var(--gold);
+
+    font-size: clamp(24px, 2vw, 33px);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    text-transform: uppercase;
+
+    margin: 0 0 8px !important;
+
+    padding: 0 !important;
+}
+
+.description {
+    font-size: clamp(20px, 1.65vw, 29px);
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    min-height: 75px;
+}
+
+.model-container {
+    height: 370px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    margin-top: 30px;
+
+    position: relative;
+}
+
+.model-image {
+    max-width: 90%;
+
+    width: auto;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 10px 12px rgba(0, 0, 0, 0.25)
+    );
+
+    transition: transform .3s ease;
+}
+
+.model-image:hover {
+    transform: translateY(-5px);
+}
+
+.left-model {
+    height: 350px;
+}
+
+.right-model {
+    height: 340px;
+}
+
+.swatches {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.swatch {
+    width: 68px;
+
+    height: 68px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.25);
+
+    transition: transform .3s ease;
+}
+
+.swatch:hover {
+    transform: scale(1.08);
+}
+
+.swatch-dark {
+    background: #650018;
+}
+
+.swatch-rose {
+    background: #d98f8f;
+}
+
+.swatch-white {
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   GIFT PAGE
+===================================================== */
+
+.gift-page {
+    min-height: 100vh;
+
+    width: 100%;
+
+    background: #91323e;
+
+    color: var(--cream);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 7vw 70px;
+
+    overflow: hidden;
+}
+
+.gift-content {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.gift-block {
+    margin-bottom: 38px;
+}
+
+.gift-block:first-child {
+    margin-top: 15px;
+}
+
+.gift-script {
+    font-family: "Great Vibes", cursive;
+
+    color: var(--gold);
+
+    font-size: clamp(30px, 3vw, 43px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 0 0 10px;
+
+    padding: 0;
+}
+
+.gift-text {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    color: var(--cream);
+
+    font-size: clamp(17px, 1.35vw, 22px);
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    max-width: 850px;
+}
+
+.verse-reference {
+    color: var(--gold);
+
+    font-size: clamp(18px, 1.5vw, 23px);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    margin: 0 0 7px;
+
+    padding: 0;
+
+    letter-spacing: .5px;
+}
+
+.verse {
+    color: var(--cream);
+
+    font-size: clamp(17px, 1.4vw, 22px);
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 0;
+}
+
+.small-message {
+    color: var(--cream);
+
+    font-size: clamp(12px, 1vw, 16px);
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    max-width: 600px;
+
+    margin: 0 auto 12px;
+
+    padding: 0;
+
+    text-transform: uppercase;
+}
+
+.final-message {
+    font-family: "Great Vibes", cursive;
+
+    color: var(--gold);
+
+    font-size: clamp(42px, 4vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+/* =====================================================
+   THREE FULL WIDTH PHOTOS BEFORE RSVP
+===================================================== */
+
+.three-full-width-photos {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.full-photo {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.full-photo img {
+    width: 100%;
+
+    height: 700px;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    transition: transform 0.6s ease;
+}
+
+.full-photo:hover img {
+    transform: scale(1.02);
+}
+
+
+/* =====================================================
+   THREE PHOTOS - TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .full-photo img {
+        height: 550px;
+    }
+}
+
+
+/* =====================================================
+   THREE PHOTOS - MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    .full-photo img {
+        height: 500px;
+    }
+}
+
+
+/* =====================================================
+   THREE PHOTOS - SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .full-photo img {
+        height: 450px;
+    }
+}
+
+
+/* =====================================================
+   RSVP PAGE
+===================================================== */
+
+.rsvp-page {
+    min-height: 100vh;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    color: var(--rsvp-burgundy);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 30px 80px;
+
+    overflow: hidden;
+}
+
+.rsvp-content {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.rsvp-kindly-top {
+    font-family: "Great Vibes", cursive;
+
+    color: var(--rsvp-burgundy);
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    font-weight: 400;
+
+    line-height: .8;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+.rsvp-respond {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: var(--rsvp-burgundy);
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    margin: 15px 0 0;
+
+    padding: 0;
+}
+
+.rsvp-kindly {
+    font-family: "Great Vibes", cursive;
+
+    color: var(--rsvp-burgundy);
+
+    font-size: clamp(55px, 6vw, 82px);
+
+    font-weight: 400;
+
+    line-height: .75;
+
+    margin: 18px 0 0;
+
+    padding: 0;
+}
+
+.rsvp-main-row {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    gap: 25px;
+
+    margin-top: 20px;
+}
+
+.rsvp-by {
+    text-align: left;
+
+    color: var(--rsvp-burgundy);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(16px, 1.7vw, 23px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    text-transform: uppercase;
+}
+
+.rsvp-by strong {
+    font-weight: 400;
+}
+
+.rsvp-date {
+    margin-top: 4px;
+
+    font-size: clamp(15px, 1.5vw, 21px);
+
+    font-weight: 700;
+}
+
+.rsvp-large {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: var(--rsvp-burgundy);
+
+    font-size: clamp(55px, 6vw, 82px);
+
+    font-weight: 400;
+
+    line-height: .8;
+
+    letter-spacing: -2px;
+
+    margin: 0;
+}
+
+.seat-message {
+    color: var(--rsvp-burgundy);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(12px, 1vw, 15px);
+
+    font-weight: 600;
+
+    margin: 38px 0 0;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+}
+
+.rsvp-instructions {
+    color: var(--rsvp-burgundy);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(11px, 1vw, 15px);
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    margin: 35px auto 0;
+
+    max-width: 570px;
+
+    text-transform: uppercase;
+}
+
+.rsvp-instructions p {
+    margin: 0 0 17px;
+}
+
+.rsvp-final {
+    color: var(--rsvp-burgundy);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(11px, 1vw, 15px);
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-transform: uppercase;
+
+    margin: 28px auto 0;
+
+    max-width: 580px;
+}
