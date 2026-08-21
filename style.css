@@ -89,7 +89,7 @@ body {
     align-items: center;
     text-align: center;
 
-    color: #4A2C24;
+    color: #FFD84D;
     z-index: 2;
 
     text-shadow:
@@ -116,7 +116,7 @@ body {
     letter-spacing: 0;
     line-height: 1;
 
-    color: #3B211B;
+    color: #FFD84D;
 }
 
 .wedding-names .initials .letter {
@@ -129,7 +129,7 @@ body {
     font-style: normal;
     letter-spacing: 0;
     margin: 0;
-    color: #4A2C24;
+    color: #FFD84D;
 }
 
 
@@ -150,7 +150,7 @@ body {
 
     white-space: nowrap;
 
-    color: #4A2C24;
+    color: #FFD84D;
 }
 
 
@@ -171,7 +171,7 @@ body {
 
     font-weight: 500;
 
-    color: #4A2C24;
+    color: #FFD84D;
 }
 
 
